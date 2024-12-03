@@ -4,7 +4,8 @@ WORKDIR /app
 COPY . .
 
 # Fix arm64 timeouts
-RUN yarn config set network-timeout 300000 && yarn global add node-gyp
+RUN yarn config set network-timeout 300000
+RUN yarn global add node-gyp
 
 # install deps
 RUN yarn install --frozen-lockfile

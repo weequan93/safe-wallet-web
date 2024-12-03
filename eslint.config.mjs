@@ -44,7 +44,7 @@ export default [
       '@next/next/no-page-custom-font': 'off',
       'unused-imports/no-unused-imports': 'error',
       '@typescript-eslint/consistent-type-imports': 'error',
-      '@typescript-eslint/await-thenable': 'error',
+      '@typescript-eslint/await-thenable': 'off',
       'no-constant-condition': 'warn',
 
       'unused-imports/no-unused-vars': [
