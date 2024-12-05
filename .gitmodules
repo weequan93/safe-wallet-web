@@ -1,0 +1,6 @@
+[submodule "safe-apps-sdk"]
+	path = safe-apps-sdk
+	url = https://github.com/weequan93/safe-apps-sdk.git
+[submodule "safe-core-sdk"]
+	path = safe-core-sdk
+	url = https://github.com/weequan93/safe-core-sdk.git
