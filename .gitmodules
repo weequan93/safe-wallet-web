@@ -1,0 +1,3 @@
+[submodule "safe-core-sdk"]
+	path = safe-core-sdk
+	url = https://github.com/weequan93/safe-core-sdk
