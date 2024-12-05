@@ -74,6 +74,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ### Deriw Release
 
 ```shell
+cd ./safe-core-sdk/
+yarn install
+yarn build
+cd ..
 docker build --platform=linux/amd64 -t  quanquanah/deriw-safeglobal-safe-wallet-web:dev .
 docker push quanquanah/deriw-safeglobal-safe-wallet-web:dev .
 ```
