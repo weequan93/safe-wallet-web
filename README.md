@@ -116,6 +116,11 @@ yarn cypress:open
 You can then choose which e2e tests to run.
 Some tests will require signer private keys, please include them in your .env file
 
+## Deriw Releas
+
+docker build --platform=linux/amd64 -t  quanquanah/deriw-safeglobal-safe-wallet-web:dev .
+docker push quanquanah/deriw-safeglobal-safe-wallet-web:dev .
+
 ## Component template
 
 To create a new component from a template:
