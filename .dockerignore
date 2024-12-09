@@ -2,6 +2,7 @@ Dockerfile
 .dockerignore
 node_modules
 npm-debug.log
+.env
 .next
 .git
 coverage
@@ -13,3 +14,6 @@ build/
 coverage/
 cypress/
 out/
+
+!safe-apps-sdk/**/build/*
+!safe-core-sdk/**/build/*
