@@ -119,7 +119,7 @@ Some tests will require signer private keys, please include them in your .env fi
 ## Deriw Releas
 
 docker build --platform=linux/amd64 -t  quanquanah/deriw-safeglobal-safe-wallet-web:dev .
-docker push quanquanah/deriw-safeglobal-safe-wallet-web:dev .
+docker push quanquanah/deriw-safeglobal-safe-wallet-web:dev
 
 ## Component template
 
