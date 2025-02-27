@@ -56,7 +56,7 @@ const ReviewSignMessageOnChain = ({ message, method, requestId }: SignMessageOnC
 
   useEffect(() => {
     if (!readOnlySignMessageLibContract) return
-    readOnlySignMessageLibContract.getAddress().then(setSignMessageAddress)
+    setSignMessageAddress(readOnlySignMessageLibContract.getAddress())
   }, [readOnlySignMessageLibContract])
 
   const [decodedMessage, readableMessage] = useMemo(() => {

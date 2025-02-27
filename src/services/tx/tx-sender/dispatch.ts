@@ -213,6 +213,7 @@ export const dispatchSafeTxSpeedUp = async (
         transactionResponse: null,
       }
     } else {
+      // @ts-ignore
       result = await sdk.executeTransaction(safeTx, txOptions)
     }
     txDispatch(TxEvent.EXECUTING, eventParams)
@@ -223,6 +224,7 @@ export const dispatchSafeTxSpeedUp = async (
 
   txDispatch(TxEvent.PROCESSING, {
     ...eventParams,
+    // @ts-ignore
     txHash: result.hash,
     signerAddress,
     signerNonce,
@@ -230,6 +232,7 @@ export const dispatchSafeTxSpeedUp = async (
     txType: 'SafeTx',
   })
 
+  // @ts-ignore
   return result.hash
 }
 
@@ -304,6 +307,7 @@ export const dispatchTxExecution = async (
         transactionResponse: null,
       }
     } else {
+      // @ts-ignore
       result = await sdk.executeTransaction(safeTx, txOptions)
     }
     txDispatch(TxEvent.EXECUTING, { ...eventParams })
@@ -315,6 +319,7 @@ export const dispatchTxExecution = async (
   txDispatch(TxEvent.PROCESSING, {
     ...eventParams,
     nonce: safeTx.data.nonce,
+    // @ts-ignore
     txHash: result.hash,
     signerAddress,
     signerNonce,
@@ -322,6 +327,7 @@ export const dispatchTxExecution = async (
     txType: 'SafeTx',
   })
 
+  // @ts-ignore
   return result.hash
 }
 
@@ -550,6 +556,7 @@ export const dispatchBatchExecutionRelay = async (
   safeVersion: string,
 ) => {
   const to = await multiSendContract.getAddress()
+  // @ts-ignore
   const data = multiSendContract.contract.interface.encodeFunctionData('multiSend', [multiSendTxData])
   const groupKey = multiSendTxData
 

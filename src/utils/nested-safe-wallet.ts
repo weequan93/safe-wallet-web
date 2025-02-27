@@ -86,6 +86,7 @@ export const getNestedWallet = (
 
           // First we propose so the backend will pick it up
           await proposeTx(safeInfo.chainId, safeInfo.address.value, actualWallet.address, safeTx, safeTxHash)
+          // @ts-ignore
           result = await connectedSDK.approveTransactionHash(safeTxHash)
         } else {
           // Sign off-chain
@@ -94,6 +95,7 @@ export const getNestedWallet = (
             await proposeTx(safeInfo.chainId, safeInfo.address.value, actualWallet.address, safeTx, safeTxHash)
 
             // Directly execute the tx
+            // @ts-ignore
             result = await connectedSDK.executeTransaction(safeTx)
           } else {
             const signedTx = await tryOffChainTxSigning(safeTx, safeInfo.version, connectedSDK)

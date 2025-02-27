@@ -82,6 +82,7 @@ const useIsValidExecution = (
        * This also fixes the over-fetching issue of the monkey patched provider.
        */
 
+      // @ts-ignore
       return safeContract.contract.execTransaction.staticCall(
         safeTx.data.to,
         safeTx.data.value,

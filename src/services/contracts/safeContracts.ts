@@ -123,6 +123,7 @@ export const getReadOnlyProxyFactoryContract = async (safeVersion: SafeInfo['ver
   return getSafeProxyFactoryContractInstance(
     _getValidatedGetContractProps(safeVersion).safeVersion,
     safeProvider,
+    // @ts-ignore
     safeProvider.getExternalProvider(),
     contractAddress,
   )
